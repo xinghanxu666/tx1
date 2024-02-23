@@ -1,29 +1,62 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>星涵煦的网站</title>
 <style>
-	body{
-		background-color:#444;
-		font-size:14px;
-	}
-	h3{
-		font-size:60px;
-		color:#eee;
-		text-align:center;
-		padding-top:30px;
-		font-weight:normal;
-	}
+    body {
+        background-color: #444;
+        font-size: 14px;
+    }
+    h3 {
+        font-size: 60px;
+        color: #eee;
+        text-align: center;
+        padding-top: 30px;
+        font-weight: normal;
+    }
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
 </style>
 </head>
-
 <body>
-<h3>星涵煦</h3>
-<h2>这是星涵煦的一个小小的网站</h2>
-<h2></h2>
-<a href="./1.html">点击查看服务器IP和端口</a>    <a href="6">点击下载服务器地图备份</a>      <a href="6">6</a>
+    <h3>星涵煦</h3>
+    <h2>这是星涵煦的一个小小的网站</h2>
+    <h2></h2>
+    <div id="buttonContainer"></div>
+
+<script>
+    // 通过 JavaScript 动态创建超链接按钮
+    var buttonContainer = document.getElementById("buttonContainer");
+
+    // 预设超链接按钮的数据
+    var buttonsData = [
+        { text: "点击查看服务器IP和端口", url: "./1.html" },
+        { text: "点击下载服务器地图备份", url: "6" },
+        { text: "按钮3", url: "6" },
+        // 添加更多按钮数据...
+    ];
+
+    // 循环创建按钮并添加到页面中
+    buttonsData.forEach(function(buttonData, index) {
+        var button = document.createElement("a");
+        button.textContent = buttonData.text;
+        button.href = buttonData.url;
+        button.classList.add("btn");
+        buttonContainer.appendChild(button);
+    });
+</script>
 </body>
 </html>
